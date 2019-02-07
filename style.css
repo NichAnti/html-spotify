@@ -37,7 +37,7 @@ span {
 /* BARRA NAVIGAZIONE A SX */
 /* ALTEZZA LARGHEZZA POSIZIONE SFONDO PADDING */
 .all-page > nav {
-  width: 230px;
+  width: 80px;
   height: calc(100% - 90px);
   position: fixed;
   top: 0;
@@ -53,9 +53,11 @@ span {
 .all-page > nav .spotify-logo--text{
     height: 40px;
     margin-bottom: 18px;
+    display: none;
 }
 .all-page > nav .spotify-logo {
-  display: none;
+  height: 40px;
+  margin-bottom: 18px;
 }
 
 /* TOGLI I PUNTI E IL PADDING NEL MENU e SISTEMA ELEMENTI LISTA*/
@@ -70,11 +72,13 @@ span {
 }
 .all-page > nav li span{
   margin-left: 16px;
+  display: none;
 }
 
 /* MARGINE LISTA ASCOLTATI DI RECENTE E PADDING VARI*/
 .all-page > nav .recently-played {
   margin-top: 24px;
+  display: none;
 }
 .all-page > nav .recently-played .title{
   margin-bottom: 7px;
@@ -118,6 +122,9 @@ span {
   margin-right: 10px;
   background-color: white;
 }
+.all-page > nav > .bottom span {
+  display: none;
+}
 
 /* BARRA DI RIPRODUZIONE IN BASSO */
 .all-page > .player {
@@ -154,11 +161,13 @@ span {
 }
 
 .player .current-song .song-artist-name .song-name {
+  display: none;
   color: white;
   margin-bottom: 5px;
 }
 
 .player .current-song .song-artist-name .artist-name {
+  display: none;
   font-size: 12px;
 }
 
@@ -187,7 +196,8 @@ span {
 .bar {
   display: inline-block;
   height: 4px;
-  width: 550px;
+  min-width: 148px;
+  max-width: 550px;
   margin: 14px 5px;
   background-color: #b3b3b3;
 }
@@ -202,13 +212,15 @@ span {
 /* PARTE PRINCIPALE */
 .all-page > main {
   width: 100%;
-  padding-left: 230px;
+  padding-left: 80px;
   padding-bottom: 200px;
   background-color: purple;
 }
 
 .container {
   max-width: 1224px;
+  min-width: 640px;
+  padding: 0 32px;
   margin: auto;
 }
 
@@ -216,6 +228,7 @@ main nav {
   padding: 20px 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 main nav div {
@@ -272,20 +285,56 @@ main section h1 {
 }
 
 .col-xs-6 {
-  width: calc(100% / 2);
+  width: 288px;
 }
 
-@media (min-width: 576px) {
-.col-sm-4 {
-  width: calc(100% / 3);
+@media (min-width: 721px) {
+  .col-sm-4 {
+    width: calc(100% / 2);
+  }
+  .player .current-song .song-artist-name .song-name {
+    display: block;
+  }
+  .player .current-song .song-artist-name .artist-name {
+    display: block;
+  }
+  .all-page > nav {
+    width: 230px;
+  }
+  .all-page > main {
+    padding-left: 230px;
+  }
+  .all-page > nav .spotify-logo {
+    display: none;
+  }
+  .all-page > nav .spotify-logo--text{
+    display: block;
+  }
+  .all-page > nav li span{
+    display: inline;
+  }
+  .all-page > nav .recently-played {
+    display: block;
+  }
+  .all-page > nav > .bottom span {
+    display: inline;
+  }
 }
 
 @media (min-width: 768px) {
-.col-md-3 {
-  width: calc(100% / 4);
+  .col-md-3 {
+    width: calc(100% / 3);
+  }
 }
 
 @media (min-width: 992px) {
-.col-lg-2 {
-  width: calc(100% / 6);
+  .col-lg-2 {
+    width: calc(100% / 4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-2 {
+    width: calc(100% / 6);
+  }
 }
