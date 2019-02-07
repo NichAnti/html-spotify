@@ -1,0 +1,291 @@
+/* PROPRIETA' GENERALI*/
+/* BOX-SIZING E FONT-FAMILY */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+  color: #b3b3b3;
+}
+
+/* colore bianco se selezionato */
+.white-hover *{
+  transition-property: color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+}
+.white-hover:hover *{
+  color: white;
+}
+
+span.maiuscolo {
+  font-size: 11px;
+  font-weight: 200;
+  letter-spacing: 1.76px;
+}
+
+span {
+  font-size: 14px;
+}
+
+/* CONTENITORE PAGINA INTERA */
+/* ALTEZZA LARGHEZZA E SFONDO */
+.all-page {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* BARRA NAVIGAZIONE A SX */
+/* ALTEZZA LARGHEZZA POSIZIONE SFONDO PADDING */
+.all-page > nav {
+  width: 230px;
+  height: calc(100% - 90px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.8);
+  padding: 24px;
+}
+
+/* RIDIMENSIONAMENTO LOGO */
+.logo *{
+  color: white;
+}
+.all-page > nav .spotify-logo--text{
+    height: 40px;
+    margin-bottom: 18px;
+}
+.all-page > nav .spotify-logo {
+  display: none;
+}
+
+/* TOGLI I PUNTI E IL PADDING NEL MENU e SISTEMA ELEMENTI LISTA*/
+.all-page > nav ul {
+  list-style: none;
+  padding: 0;
+}
+.all-page > nav li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.all-page > nav li span{
+  margin-left: 16px;
+}
+
+/* MARGINE LISTA ASCOLTATI DI RECENTE E PADDING VARI*/
+.all-page > nav .recently-played {
+  margin-top: 24px;
+}
+.all-page > nav .recently-played .title{
+  margin-bottom: 7px;
+}
+.all-page > nav .recently-played .list > div{
+  padding: 5px 0;
+}
+
+/* PARTE BASSA DELLA BARRA A SX */
+.all-page > nav > .bottom{
+  position: absolute;
+  bottom: 7px;
+  width: calc(100% - 48px);
+}
+.all-page > nav > .bottom .install{
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.all-page > nav > .bottom .install svg{
+  width: 20px;
+  margin-right: 16px;
+}
+
+.all-page > nav > .bottom .profile{
+  height: 42px;
+  padding-top: 8px;
+  border-top: 1px solid;
+  display: flex;
+  align-items: center;
+}
+.all-page > nav > .bottom .profile span {
+  font-weight: bold;
+  color: white;
+}
+.all-page > nav > .bottom .profile .photo {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: white;
+}
+
+/* BARRA DI RIPRODUZIONE IN BASSO */
+.all-page > .player {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #282828;
+}
+
+.player .current-song {
+  display: flex;
+  align-items: center;
+}
+
+.player .current-song img {
+  height: 56px;
+}
+
+.player .current-song .song-artist-name {
+  display: inline-block;
+  margin: 0 14px;
+  height: 100%;
+}
+
+.player .current-song .song-artist-name div {
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.player .current-song .song-artist-name .song-name {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.player .current-song .song-artist-name .artist-name {
+  font-size: 12px;
+}
+
+.player .current-song .song-artist-name div:hover {
+  text-decoration: underline;
+}
+
+.icon32 {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+}
+
+#cuore, #cerchio {
+  font-size: 24px;
+}
+
+.duration .sopra, .duration .sotto, .audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.bar {
+  display: inline-block;
+  height: 4px;
+  width: 550px;
+  margin: 14px 5px;
+  background-color: #b3b3b3;
+}
+
+.bar2 {
+  display: inline-block;
+  height: 4px;
+  width: 100px;
+  margin: 14px 5px;
+  background-color: #b3b3b3;
+}
+/* PARTE PRINCIPALE */
+.all-page > main {
+  width: 100%;
+  padding-left: 230px;
+  padding-bottom: 200px;
+  background-color: purple;
+}
+
+.container {
+  max-width: 1224px;
+  margin: auto;
+}
+
+main nav {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+main nav div {
+  height: 46px;
+  padding: 0 20px;
+  line-height: 46px;
+}
+
+main nav span {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.92px;
+}
+
+main section h1 {
+  color: white;
+  font-size: 36px;
+  margin: 24px 0;
+}
+
+.row {
+  width: 100%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.item {
+  padding-bottom: 35px;
+  width: 100%;
+  text-align: center;
+}
+
+.square-img {
+  width: 100%;
+}
+
+.playlist-name {
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+
+.playlist-name span {
+  color: white;
+  font-weight: bold;
+}
+
+[class^="col-"] {
+  float: left;
+  padding: 0 8px;
+}
+
+.col-xs-6 {
+  width: calc(100% / 2);
+}
+
+@media (min-width: 576px) {
+.col-sm-4 {
+  width: calc(100% / 3);
+}
+
+@media (min-width: 768px) {
+.col-md-3 {
+  width: calc(100% / 4);
+}
+
+@media (min-width: 992px) {
+.col-lg-2 {
+  width: calc(100% / 6);
+}
