@@ -250,6 +250,8 @@ main section h1 {
 }
 
 .row {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
